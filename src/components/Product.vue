@@ -12,6 +12,7 @@ onBeforeMount(() => {
   axios.get(`https://dummyjson.com/products/${id}`).then((res) => {
     product.id = res.data.id;
     product.title = res.data.title;
+    product.price = res.data.price;
     product.description = res.data.description;
     product.thumbnail = res.data.thumbnail;
     product.brand = res.data.brand;
@@ -35,7 +36,8 @@ onBeforeMount(() => {
       </p>
       <p><strong>Brand: </strong>{{ product.brand }}</p>
       <p><strong>Rating: </strong>{{ product.rating }}</p>
-      <p><strong>Discount: </strong>{{ product.discountPercentage }}</p>
+      <p><strong>Discount: </strong>{{ product.discountPercentage }}%</p>
+      <p><strong>Price: </strong>${{ product.price }}</p>
       <p><strong>Category: </strong>{{ product.category }}</p>
     </div>
   </div>
