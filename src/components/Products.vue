@@ -40,7 +40,7 @@ onBeforeMount(() => {
           <router-link
             class="font-bold"
             :to="{ name: 'product', params: { id: product.id } }"
-            >See Details</router-link
+            >View Details</router-link
           >
         </div>
       </div>
